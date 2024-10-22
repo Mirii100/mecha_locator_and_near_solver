@@ -25,9 +25,11 @@ class _UserFormState extends State<UserForm> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Form(
+        child:
+        Form(
           key: _formKey,
-          child: ListView(
+          child:
+          ListView(
             children: <Widget>[
               // Username field
               TextFormField(
