@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'admin/try.dart';
+import 'authorization_screen/drawer.dart';
+import 'authorization_screen/signup.dart';
+import 'my_login.dart';
 import 'screens/homepage.dart';
 
 void main() {
@@ -16,7 +20,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      home: const Homepage(),
+      home: Homepage() ,
+
+      routes: {
+        '/signup': (context) => SignUpApp(), // Add this route for Signup
+        '/profile': (context) => LoginScreen(),
+        '/settings': (context) => LoginPage(),
+      },
     );
   }
 }

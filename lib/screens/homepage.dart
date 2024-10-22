@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
+import '../admin/role.dart';
+import '../authorization_screen/drawer.dart';
 import '../authorization_screen/login.dart';
 import '../authorization_screen/signup.dart';
+import '../my_login.dart';
 import 'location.dart';
 
 class Homepage extends StatefulWidget {
@@ -19,11 +22,8 @@ class _HomepageState extends State<Homepage> {
         title: Text("this is the homepage"),
         centerTitle: true,
       ),
-      drawer: Drawer(
-        width: 300.0,
-          backgroundColor: Colors.blueGrey,
-      ),
-      body:SignUpApp() ,
+      drawer: AppDrawer(),
+      body:LoginScreen() ,
     );
   }
 }

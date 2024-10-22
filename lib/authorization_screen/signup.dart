@@ -55,7 +55,9 @@ class _SignUpPageState extends State<SignUpPage> {
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.person),
                   prefixIconColor: Colors.blue,
-                  labelText: 'Name',
+                  labelText: 'Name',border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30.0)), // Circular border
+                ),
                 ),
                 onSaved: (value) {
                   name = value!;
@@ -72,6 +74,14 @@ class _SignUpPageState extends State<SignUpPage> {
                   prefixIcon: Icon(Icons.email),
                   prefixIconColor: Colors.blue,
                   labelText: 'Email',
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30.0)), // Circular border
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30.0)), // Circular when not focused
+                    borderSide: BorderSide(color: Colors.grey, width: 2.0), // Border style when enabled
+                  ),
+
                 ),
                 keyboardType: TextInputType.emailAddress,
                 onSaved: (value) {
@@ -89,6 +99,13 @@ class _SignUpPageState extends State<SignUpPage> {
                   prefixIcon: Icon(Icons.password),
                   prefixIconColor: Colors.blue,
                   labelText: 'Password',
+                border:   OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30.0)), // Circular border
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(30.0)), // Circular when not focused
+                    borderSide: BorderSide(color: Colors.grey, width: 2.0), // Border style when enabled
+                  ),
                 ),
                 obscureText: true,
                 onSaved: (value) {
@@ -105,7 +122,9 @@ class _SignUpPageState extends State<SignUpPage> {
                 decoration: InputDecoration(
                   prefixIcon: Icon(Icons.phone),
                   prefixIconColor: Colors.blue,
-                  labelText: 'Phone Number',
+                  labelText: 'Phone Number',border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30.0)), // Circular border
+                ),
                 ),
                 initialCountryCode: 'US',
                 onChanged: (phone) {
